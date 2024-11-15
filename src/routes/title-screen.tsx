@@ -1,12 +1,13 @@
 import { Component } from "solid-js";
 import { MainMenu } from "../components/main-menu";
 import { JSX } from "solid-js/h/jsx-runtime";
+import '../styles/title-screen.css';
+import '../styles/start-button.css';
 
 export const TitleScreen: Component = () => {
     let ref: HTMLDialogElement;
 
     const handleInput: JSX.EventHandler<HTMLButtonElement, MouseEvent | KeyboardEvent> = (event) => {
-        event.stopPropagation();
         ref.showModal();
     };
 
@@ -15,8 +16,8 @@ export const TitleScreen: Component = () => {
             <div class="main title">Ridge Racer Type 4</div>
             <div class="content">
                 <button
-                    on:click={handleInput}
-                    on:keyup={(e) => {
+                    onClick={handleInput}
+                    onKeyUp={(e) => {
                         if (e.key === "Enter") handleInput(e);
                     }}
                     type="button"
