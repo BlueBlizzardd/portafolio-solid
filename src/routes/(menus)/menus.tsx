@@ -1,4 +1,5 @@
 import { ParentComponent } from "solid-js"
+import '../../styles/menus.css'
 
 export const Menu: ParentComponent = (props) => {
     return (

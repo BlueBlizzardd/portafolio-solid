@@ -1,0 +1,1 @@
+import '../../styles/garage.css'
