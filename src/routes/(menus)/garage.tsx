@@ -44,7 +44,7 @@ export const Garage: Component = () => {
                     </A>
                     <div class="divider"></div>
                     <A
-                        href={`/${pageNames[0]}`}
+                        href={`/${pageNames}`}
                         on:keyup={(event) => {
                             if (event.key === 'ArrowRight')
                                 event.currentTarget.click();
