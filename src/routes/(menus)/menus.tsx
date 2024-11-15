@@ -1,7 +1,10 @@
 import { ParentComponent } from "solid-js"
+import { useLocation } from "@solidjs/router"
 import '../../styles/menus.css'
 
 export const Menu: ParentComponent = (props) => {
+    const location = useLocation();
+
     return (
         <div class="d-flex flex-column menu primary-bg">
             <header class="heading">

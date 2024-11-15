@@ -14,7 +14,7 @@ export const MainMenu: Component<MenuProps> = (props) => {
         <dialog ref={props.ref}>
             <Index each={options}>
                 {option =>
-                    <A href={`/${option}`}>
+                    <A href={`/${option()}`}>
                         <MenuItem title={option()} />
                     </A>
                 }
