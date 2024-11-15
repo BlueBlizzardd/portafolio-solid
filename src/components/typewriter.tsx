@@ -35,7 +35,7 @@ export const Typewriter: Component<TypewriterProps> = (props) => {
     return (
         <div class='typewriter' onClick={handleInteraction} onKeyUp={(event) => { if (event.key === 'Enter') handleInteraction() }}>
             <div class={writing() ? `typewriter-text typewriter-animation` : `typewriter-text`} onAnimationEnd={() => setWriting(false)}>{sentence()}</div>
-            <button class='next-button' onClick={() => handleClick()} autofocus>
+            <button class='next-button' onClick={handleClick} autofocus>
                 <div class="triangle"></div>
             </button>
         </div>
