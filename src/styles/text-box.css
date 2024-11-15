@@ -1,0 +1,27 @@
+@scope (.message) {
+    :scope {
+        color: white;
+        font-size: clamp(0.875rem, 0.6576rem + 1.087vw, 1.5rem);
+        translate: 0 100%;
+        animation: slide-in var(--animation-speed) linear forwards;
+        animation-delay: calc(var(--animation-speed) * 2);
+
+        * {
+            background-color: var(--menu-bg);
+        }
+    }
+
+    .text-box-title {
+        width: max-content;
+        padding-inline: 1rem;
+        border-width: 2px 2px 0 2px;
+        border-style: solid solid none solid;
+        border-color: white;
+        border-radius: 5px 5px 0 0;
+
+        &::before {
+            content: '*';
+            display: inline;
+        }
+    }
+}

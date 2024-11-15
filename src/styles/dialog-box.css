@@ -1,0 +1,29 @@
+@scope (.container) {
+    :scope {
+        width: 90%;
+        margin-inline: auto;
+        overflow: hidden;
+    }
+
+    .dialog-box {
+        position: relative;
+        padding-top: 0rem;
+        border: 3px solid white;
+        background-color: var(--dialog-bg, black);
+        animation: appear calc(var(--animation-speed) * 1.5) linear forwards;
+    }
+}
+
+@keyframes appear {
+    from {
+        translate: -100% 100%;
+    }
+
+    50% {
+        translate: 0 100%;
+    }
+
+    to {
+        translate: 0 0;
+    }
+}

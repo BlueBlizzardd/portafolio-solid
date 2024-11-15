@@ -1,0 +1,58 @@
+@scope (.menu-item) {
+    :scope {
+        border: 3px solid white;
+        border-radius: 1px;
+        font-size: clamp(1rem, 0.9648rem + 1.1745vw, 1.875rem);
+        grid-template-columns: 3fr 40px;
+    }
+
+    span {
+        height: 100%;
+        align-content: center;
+        margin-block: auto;
+        padding-inline: 1rem;
+        padding-block: 0.2rem;
+        text-align: start;
+        text-transform: capitalize;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: var(--menu-bg);
+        color: var(--menu-text);
+    }
+
+    button {
+        padding: 0.6rem;
+        grid-template-columns: repeat(2, 1fr);
+        align-content: center;
+        justify-content: center;
+        border: 1px solid var(--menu-text);
+        background-color: #bfbfbf;
+
+        &:focus,
+        &:focus-within,
+        a:hover &,
+        a:focus & {
+            animation: hovered calc(var(--animation-speed) + 0.1s) infinite steps(2);
+        }
+    }
+
+    .square {
+        aspect-ratio: 1;
+        background-color: inherit;
+        box-shadow: 3px 3px 1px, 1px 1px inset white;
+    }
+}
+
+@keyframes hovered {
+    from {
+        gap: 0;
+    }
+
+    50% {
+        gap: 0.5rem;
+    }
+
+    to {
+        gap: 0;
+    }
+}

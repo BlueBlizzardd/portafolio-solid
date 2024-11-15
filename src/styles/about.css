@@ -1,0 +1,25 @@
+@scope (.about) {
+    .about-image {
+        min-height: 315px;
+        margin-inline: auto;
+        background: url('/wine.png') no-repeat center padding-box;
+        background-size: 250px 300px;
+    }
+
+    .about-text {
+        position: relative;
+        margin: 0;
+        padding: 2rem;
+        border: 2px solid white;
+    }
+
+    .skip-button {
+        position: absolute;
+    }
+
+    @media (width < 640px) {
+        .about-text {
+            padding: 0.5rem;
+        }
+    }
+}

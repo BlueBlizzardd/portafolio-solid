@@ -1,0 +1,132 @@
+@scope (.menu) {
+    :scope {
+        min-height: 100svh;
+        justify-content: space-around;
+        align-items: stretch;
+        animation: fade-in var(--animation-speed) linear forwards;
+    }
+
+    .heading,
+    .footer {
+        margin-inline: auto;
+        width: 95%;
+        overflow: hidden;
+    }
+
+    .mode {
+        position: relative;
+        display: block;
+        padding-inline-start: 1rem;
+        font-size: clamp(1.25rem, 1.2248rem + 0.8389vw, 1.875rem);
+        overflow: hidden;
+
+        &::before {
+            content: '*';
+            display: inline;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 10;
+            inset: 0 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-bg);
+            animation: fade-in var(--animation-speed) linear forwards, slide-over var(--animation-speed) 1s forwards;
+        }
+    }
+
+    .separator {
+        margin-block: 0.2rem;
+        height: 2px;
+        background-color: var(--primary-text);
+        translate: -100%;
+        animation: slide-in 1s var(--animation-speed) linear forwards;
+    }
+
+    .controls {
+        position: relative;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-bg);
+            animation: fade-in var(--animation-speed) linear forwards, slide-under var(--animation-speed) 1s forwards;
+        }
+
+        .control {
+            position: relative;
+            padding-inline: 1rem;
+            font-size: clamp(1.25rem, 1.2248rem + 0.8389vw, 1.875rem);
+            text-align: center;
+            letter-spacing: -0.05ch;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 25%;
+                height: 50%;
+                width: 2px;
+                background-color: var(--primary-text);
+            }
+
+            &:last-child {
+                color: red;
+
+                &::before {
+                    background-color: red;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    bottom: 25%;
+                    height: 50%;
+                    width: 2px;
+                    background-color: var(--primary-text);
+                }
+            }
+        }
+    }
+}
+
+@keyframes slide-in {
+    to {
+        translate: 0;
+    }
+}
+
+@keyframes slide-under {
+    from {
+        translate: 0 0;
+    }
+
+    to {
+        translate: 0 100%;
+    }
+}
+
+@keyframes slide-over {
+    from {
+        translate: 0 0;
+    }
+
+    to {
+        translate: 0 -100%;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        background-color: black;
+    }
+}

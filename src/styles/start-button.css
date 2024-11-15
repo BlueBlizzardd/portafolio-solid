@@ -1,0 +1,29 @@
+@scope (.btn-start) {
+    :scope {
+        cursor: pointer;
+        margin-bottom: 1.5rem;
+        border: none;
+        background-color: initial;
+        font-size: clamp(1rem, 0.9597rem + 1.3423vw, 2rem);
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: -0.05ch;
+
+        &:focus-visible {
+            outline: none;
+
+            &::before {
+                content: '*';
+                display: inline;
+                opacity: 1;
+                animation: 0.4s linear alternate infinite blink-animation;
+            }
+        }
+    }
+}
+
+@keyframes blink-animation {
+    100% {
+        opacity: 0;
+    }
+}

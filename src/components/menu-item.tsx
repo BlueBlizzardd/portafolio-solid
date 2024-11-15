@@ -1,0 +1,19 @@
+import { Component } from "solid-js";
+
+type ItemProps = {
+    title: string;
+}
+
+export const MenuItem: Component<ItemProps> = (props) => {
+    return (
+        <li class="d-grid menu-item">
+            <span class="title">{props.title}</span>
+            <button type="button" class="d-grid">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </button>
+        </li>
+    );
+}
