@@ -7,7 +7,7 @@ import '../styles/start-button.css';
 export const TitleScreen: Component = () => {
     let ref: HTMLDialogElement;
 
-    const handleInput: JSX.EventHandler<HTMLButtonElement, MouseEvent | KeyboardEvent> = (event) => {
+    const handleInput: JSX.EventHandler<HTMLButtonElement, MouseEvent | KeyboardEvent> = () => {
         ref.showModal();
     };
 

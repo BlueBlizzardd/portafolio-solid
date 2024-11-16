@@ -1,5 +1,5 @@
 import { Component, createMemo } from 'solid-js'
-import { A, Params, useParams } from '@solidjs/router';
+import { A, useParams } from '@solidjs/router';
 import { DialogBox } from '../../components/dialog-box';
 import { TextBox } from '../../components/text-box';
 import { MenuItem } from '../../components/menu-item';
