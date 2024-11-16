@@ -35,7 +35,7 @@ export const Garage: Component = () => {
                 </div>
                 <div class="d-flex garage-navigation">
                     <A
-                        href={`/garage/${pageNames.at(pageID() - 1)}`}
+                        href={`/garage/${pageNames[(pageID() - 1 + pageNames.length) % pageNames.length]}`}
                         on:keyup={event => {
                             if (event.key === 'ArrowLeft')
                                 event.currentTarget.click();
@@ -44,7 +44,7 @@ export const Garage: Component = () => {
                     </A>
                     <div class="divider"></div>
                     <A
-                        href={`/garage/${pageNames.at(pageID() + 1)}`}
+                        href={`/garage/${pageNames[(pageID() + 1) % pageNames.length]}`}
                         on:keyup={(event) => {
                             if (event.key === 'ArrowRight')
                                 event.currentTarget.click();
