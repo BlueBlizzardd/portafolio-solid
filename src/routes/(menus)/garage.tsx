@@ -1,4 +1,4 @@
-import { Component } from 'solid-js'
+import { Component, createMemo } from 'solid-js'
 import { A, Params, useParams } from '@solidjs/router';
 import { DialogBox } from '../../components/dialog-box';
 import { TextBox } from '../../components/text-box';
@@ -6,13 +6,9 @@ import { MenuItem } from '../../components/menu-item';
 import { pageNames, Pages, PageURLs } from '../../types/pages';
 import '../../styles/garage.css'
 
-interface PageParams extends Params {
-    page: Pages;
-}
-
 export const Garage: Component = () => {
-    const params = useParams<PageParams>();
-    const pageID = () => pageNames.indexOf(params.page);
+    const params = useParams<{ page: Pages }>();
+    const pageID = createMemo(() => pageNames.indexOf(params.page));
     const img = () => `/${params.page}.png`;
 
     const pages: PageURLs = {

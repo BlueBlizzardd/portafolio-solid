@@ -10,12 +10,6 @@ export const Typewriter: Component<TypewriterProps> = (props) => {
     const [sentence, setSentence] = createSignal<string>(props.sentences[0]);
     const [writing, setWriting] = createSignal<boolean>(true);
 
-    let buttonRef: HTMLButtonElement;
-
-    function handleInteraction() {
-        buttonRef.click();
-    }
-
     function handleClick() {
         if (!writing())
             nextSentence(props.sentences);
@@ -33,8 +27,8 @@ export const Typewriter: Component<TypewriterProps> = (props) => {
     }
 
     return (
-        <div class='typewriter' onClick={handleInteraction} onKeyUp={(event) => { if (event.key === 'Enter') handleInteraction() }}>
-            <div class={writing() ? `typewriter-text typewriter-animation` : `typewriter-text`} onAnimationEnd={() => setWriting(false)}>{sentence()}</div>
+        <div class='typewriter' onClick={handleClick} onKeyUp={(event) => { if (event.key === 'Enter') handleClick() }}>
+            <div class={writing() ? 'typewriter-text typewriter-animation' : 'typewriter-text'} onAnimationEnd={() => setWriting(false)}>{sentence()}</div>
             <button class='next-button' onClick={handleClick} autofocus>
                 <div class="triangle"></div>
             </button>
