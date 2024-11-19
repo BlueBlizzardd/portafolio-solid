@@ -4,6 +4,7 @@
         border-radius: 1px;
         font-size: clamp(1rem, 0.9648rem + 1.1745vw, 1.875rem);
         grid-template-columns: 3fr 40px;
+        transition: all var(--animation-speed) ease-in allow-discrete;
     }
 
     span {
@@ -40,6 +41,12 @@
         aspect-ratio: 1;
         background-color: inherit;
         box-shadow: 3px 3px 1px, 1px 1px inset white;
+    }
+
+    @starting-style {
+        :scope {
+            grid-template-columns: 0fr 40px;
+        }
     }
 }
 
