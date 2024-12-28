@@ -1,28 +1,8 @@
-## Usage
+This is a portfolio made to showcase all of my current knowledge in the world of CSS and JS frameworks, also using TypeScript. It was made as part of the CS50x 2024 course, and as such, I also took the opportunity to pursue a lot of knowledge and improve in some areas I felt I was lacking in, while also experimenting with new ideas and technologies. Also of notice is the fact that this project was built initially as a React project, using TanStack Router as a way to organize routes (link to that project [here](https://github.com/BlueBlizzardd/portafolio-tanstack). I later changed my mind and pursued building this personal website using SolidJS, as a way to practice another framework and pursue more perspectives.
 
-```bash
-$ npm install # or pnpm install or yarn install
-```
+Among the ideas that were implemented and experimented on were the following:
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm run dev`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-Learn more about deploying your application with the [documentations](https://vite.dev/guide/static-deploy.html)
+- CSS animations and transitions.
+- CSS @scope rule and component encapsulation.
+- Solid router, using another framework that is NOT React to showcase a little bit of its strengths.
+- Folder organization and structuring of a bigger project.
