@@ -2,12 +2,13 @@ import { Component } from "solid-js";
 import '../styles/menu-item.css';
 
 type ItemProps = {
-    title: string;
+    title: string,
+    onclick?: () => void;
 }
 
 export const MenuItem: Component<ItemProps> = (props) => {
     return (
-        <li class="d-grid menu-item">
+        <li onclick={props.onclick} class="d-grid menu-item">
             <span class="title">{props.title}</span>
             <button type="button" class="d-grid">
                 <div class="square"></div>

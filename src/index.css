@@ -6,8 +6,6 @@
   --animation-speed: 0.5s;
 }
 
-/* I'm not applying border-box to everything because it makes it unperformant */
-
 * {
   box-sizing: border-box;
 }
