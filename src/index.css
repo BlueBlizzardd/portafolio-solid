@@ -1,63 +1,68 @@
 :root {
-  --primary-bg: hsl(45, 100%, 49%);
-  --primary-text: black;
-  --menu-bg: hsl(0, 0%, 29%);
-  --menu-text: hsl(0, 0%, 75%);
-  --animation-speed: 0.5s;
+    --primary-bg: hsl(45, 100%, 49%);
+    --primary-text: black;
+    --menu-bg: hsl(0, 0%, 29%);
+    --menu-text: hsl(0, 0%, 75%);
+    --animation-speed: 0.5s;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .primary-bg {
-  background-color: var(--primary-bg);
-  color: var(--primary-text);
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
 }
 
 .uppercase {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .d-flex {
-  display: flex;
+    display: flex;
 }
 
 .flex-column {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 .d-grid {
-  display: grid;
+    display: grid;
 }
 
 .title {
-  /* <uniquifier>: Use a unique and descriptive class name
+    /* <uniquifier>: Use a unique and descriptive class name
         <weight>: Use a value from 100 to 1000 */
 
-  font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-  font-variation-settings:
-    "slnt" 0,
-    "wdth" 87.5,
-    "GRAD" 150,
-    "XOPQ" 50,
-    "XTRA" 450,
-    "YOPQ" 40,
-    "YTAS" 750,
-    "YTDE" -203,
-    "YTFI" 738,
-    "YTLC" 514,
-    "YTUC" 712;
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 87.5,
+        "GRAD" 150,
+        "XOPQ" 50,
+        "XTRA" 450,
+        "YOPQ" 40,
+        "YTAS" 750,
+        "YTDE" -203,
+        "YTFI" 738,
+        "YTLC" 514,
+        "YTUC" 712;
+}
+
+.no-motion * {
+    transition: none !important;
+    animation: none !important;
 }

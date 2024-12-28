@@ -7,7 +7,7 @@
         perspective: 500px;
         aspect-ratio: 2 / 1;
         transform: rotateY(45deg);
-        animation: rotate calc(var(--animation-speed) * 6) linear infinite;
+        animation: rotate calc(var(--animation-speed) * 10) linear infinite;
     }
 
     .garage-links {
