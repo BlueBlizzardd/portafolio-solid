@@ -5,10 +5,10 @@ import '../styles/title-screen.css';
 import '../styles/start-button.css';
 
 export const TitleScreen: Component = () => {
-    let ref: HTMLDialogElement;
+    let ref: HTMLDialogElement | undefined;
 
     const handleInput: JSX.EventHandler<HTMLButtonElement, MouseEvent | KeyboardEvent> = () => {
-        ref.showModal();
+        ref?.showModal();
     };
 
     return (
